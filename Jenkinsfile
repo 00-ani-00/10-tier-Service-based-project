@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Git Checkout') {
             steps {
-                git branch: 'latest', url: 'https://github.com/devops-maestro17/10-Tier-MicroService-Appliction.git'
+                git branch: 'latest', url: 'https://github.com/00-ani-00/Service-based-project.git'
             }
         }
         stage('Static Code Analysis') {

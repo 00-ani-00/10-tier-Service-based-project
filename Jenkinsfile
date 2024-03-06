@@ -5,6 +5,11 @@ pipeline {
         SCANNER_HOME = tool 'sonar-scanner'
     }
     stages {
+        stage('clean workspace'){
+            steps{
+                cleanWs()
+            }
+        }
         stage('Git Checkout') {
             steps {
                 git branch: 'main', url: 'https://github.com/00-ani-00/10-tier-Service-based-project.git'

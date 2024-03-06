@@ -22,7 +22,7 @@ pipeline {
             steps {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        dir('/var/lib/jenkins/workspace/decaFlow-CICD-pipeline/src/adservice') {
+                        dir('/var/lib/jenkins/workspace/src/adservice/Dockerfile') {
                             sh 'docker build -t anilagad/adservice:latest .'
                             sh 'docker push anilagad/adservice:latest'
                             sh 'docker rmi anilagad/adservice:latest'
@@ -36,7 +36,7 @@ pipeline {
             steps {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        dir('/var/lib/jenkins/workspace/decaFlow-CICD-pipeline/src/cartservice/src/') {
+                        dir('/var/lib/jenkins/workspace/src/cartservice/src/') {
                             sh 'docker build -t anilagad/cartservice:latest .'
                             sh 'docker push anilagad/cartservice:latest'
                             sh 'docker rmi anilagad/cartservice:latest'
@@ -50,7 +50,7 @@ pipeline {
             steps {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        dir('/var/lib/jenkins/workspace/decaFlow-CICD-pipeline/src/checkoutservice') {
+                        dir('/var/lib/jenkins/workspace/src/checkoutservice') {
                             sh 'docker build -t anilagad/checkoutservice:latest .'
                             sh 'docker push anilagad/checkoutservice:latest'
                             sh 'docker rmi anilagad/checkoutservice:latest'
@@ -64,7 +64,7 @@ pipeline {
             steps {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        dir('/var/lib/jenkins/workspace/decaFlow-CICD-pipeline/src/currencyservice') {
+                        dir('/var/lib/jenkins/workspace/src/currencyservice') {
                             sh 'docker build -t anilagad/currencyservice:latest .'
                             sh 'docker push anilagad/currencyservice:latest'
                             sh 'docker rmi anilagad/currencyservice:latest'
@@ -78,7 +78,7 @@ pipeline {
             steps {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        dir('/var/lib/jenkins/workspace/decaFlow-CICD-pipeline/src/emailservice') {
+                        dir('/var/lib/jenkins/workspace/src/emailservice') {
                             sh 'docker build -t anilagad/emailservice:latest .'
                             sh 'docker push anilagad/emailservice:latest'
                             sh 'docker rmi anilagad/emailservice:latest'
@@ -92,7 +92,7 @@ pipeline {
             steps {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        dir('/var/lib/jenkins/workspace/decaFlow-CICD-pipeline/src/frontend') {
+                        dir('/var/lib/jenkins/workspace/src/frontend') {
                             sh 'docker build -t anilagad/frontend:latest .'
                             sh 'docker push anilagad/frontend:latest'
                             sh 'docker rmi anilagad/frontend:latest'
@@ -106,7 +106,7 @@ pipeline {
             steps {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        dir('/var/lib/jenkins/workspace/decaFlow-CICD-pipeline/src/loadgenerator') {
+                        dir('/var/lib/jenkins/workspace/src/loadgenerator') {
                             sh 'docker build -t anilagad/loadgenerator:latest .'
                             sh 'docker push anilagad/loadgenerator:latest'
                             sh 'docker rmi anilagad/loadgenerator:latest'
@@ -120,7 +120,7 @@ pipeline {
             steps {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        dir('/var/lib/jenkins/workspace/decaFlow-CICD-pipeline/src/paymentservice') {
+                        dir('/var/lib/jenkins/workspace/src/paymentservice') {
                             sh 'docker build -t anilagad/paymentservice:latest .'
                             sh 'docker push anilagad/paymentservice:latest'
                             sh 'docker rmi anilagad/paymentservice:latest'
@@ -134,7 +134,7 @@ pipeline {
             steps {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        dir('/var/lib/jenkins/workspace/decaFlow-CICD-pipeline/src/productcatalogservice') {
+                        dir('/var/lib/jenkins/workspace/src/productcatalogservice') {
                             sh 'docker build -t anilagad/productcatalogservice:latest .'
                             sh 'docker push anilagad/productcatalogservice:latest'
                             sh 'docker rmi anilagad/productcatalogservice:latest'
@@ -148,7 +148,7 @@ pipeline {
             steps {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        dir('/var/lib/jenkins/workspace/decaFlow-CICD-pipeline/src/recommendationservice') {
+                        dir('/var/lib/jenkins/workspace/src/recommendationservice') {
                             sh 'docker build -t anilagad/recommendationservice:latest .'
                             sh 'docker push anilagad/recommendationservice:latest'
                             sh 'docker rmi anilagad/recommendationservice:latest'
@@ -162,7 +162,7 @@ pipeline {
             steps {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        dir('/var/lib/jenkins/workspace/decaFlow-CICD-pipeline/src/shippingservice') {
+                        dir('/var/lib/jenkins/workspace/src/shippingservice') {
                             sh 'docker build -t anilagad/shippingservice:latest .'
                             sh 'docker push anilagad/shippingservice:latest'
                             sh 'docker rmi anilagad/shippingservice:latest'

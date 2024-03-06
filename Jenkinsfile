@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Git Checkout') {
             steps {
-                git branch: 'latest', url: 'https://github.com/00-ani-00/Service-based-project.git'
+                git branch: 'latest', url: 'https://github.com/00-ani-00/10-tier-Service-based-project.git'
             }
         }
         stage('Static Code Analysis') {
@@ -23,9 +23,9 @@ pipeline {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
                         dir('/var/lib/jenkins/workspace/decaFlow-CICD-pipeline/src/adservice') {
-                            sh 'docker build -t containerizeops/adservice:latest .'
-                            sh 'docker push containerizeops/adservice:latest'
-                            sh 'docker rmi containerizeops/adservice:latest'
+                            sh 'docker build -t anilagad/adservice:latest .'
+                            sh 'docker push anilagad/adservice:latest'
+                            sh 'docker rmi anilagad/adservice:latest'
                         }
                     }
                 }
@@ -37,9 +37,9 @@ pipeline {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
                         dir('/var/lib/jenkins/workspace/decaFlow-CICD-pipeline/src/cartservice/src/') {
-                            sh 'docker build -t containerizeops/cartservice:latest .'
-                            sh 'docker push containerizeops/cartservice:latest'
-                            sh 'docker rmi containerizeops/cartservice:latest'
+                            sh 'docker build -t anilagad/cartservice:latest .'
+                            sh 'docker push anilagad/cartservice:latest'
+                            sh 'docker rmi anilagad/cartservice:latest'
                         }
                     }
                 }
@@ -51,9 +51,9 @@ pipeline {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
                         dir('/var/lib/jenkins/workspace/decaFlow-CICD-pipeline/src/checkoutservice') {
-                            sh 'docker build -t containerizeops/checkoutservice:latest .'
-                            sh 'docker push containerizeops/checkoutservice:latest'
-                            sh 'docker rmi containerizeops/checkoutservice:latest'
+                            sh 'docker build -t anilagad/checkoutservice:latest .'
+                            sh 'docker push anilagad/checkoutservice:latest'
+                            sh 'docker rmi anilagad/checkoutservice:latest'
                         }
                     }
                 }
@@ -65,9 +65,9 @@ pipeline {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
                         dir('/var/lib/jenkins/workspace/decaFlow-CICD-pipeline/src/currencyservice') {
-                            sh 'docker build -t containerizeops/currencyservice:latest .'
-                            sh 'docker push containerizeops/currencyservice:latest'
-                            sh 'docker rmi containerizeops/currencyservice:latest'
+                            sh 'docker build -t anilagad/currencyservice:latest .'
+                            sh 'docker push anilagad/currencyservice:latest'
+                            sh 'docker rmi anilagad/currencyservice:latest'
                         }
                     }
                 }
@@ -79,9 +79,9 @@ pipeline {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
                         dir('/var/lib/jenkins/workspace/decaFlow-CICD-pipeline/src/emailservice') {
-                            sh 'docker build -t containerizeops/emailservice:latest .'
-                            sh 'docker push containerizeops/emailservice:latest'
-                            sh 'docker rmi containerizeops/emailservice:latest'
+                            sh 'docker build -t anilagad/emailservice:latest .'
+                            sh 'docker push anilagad/emailservice:latest'
+                            sh 'docker rmi anilagad/emailservice:latest'
                         }
                     }
                 }
@@ -93,9 +93,9 @@ pipeline {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
                         dir('/var/lib/jenkins/workspace/decaFlow-CICD-pipeline/src/frontend') {
-                            sh 'docker build -t containerizeops/frontend:latest .'
-                            sh 'docker push containerizeops/frontend:latest'
-                            sh 'docker rmi containerizeops/frontend:latest'
+                            sh 'docker build -t anilagad/frontend:latest .'
+                            sh 'docker push anilagad/frontend:latest'
+                            sh 'docker rmi anilagad/frontend:latest'
                         }
                     }
                 }
@@ -107,9 +107,9 @@ pipeline {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
                         dir('/var/lib/jenkins/workspace/decaFlow-CICD-pipeline/src/loadgenerator') {
-                            sh 'docker build -t containerizeops/loadgenerator:latest .'
-                            sh 'docker push containerizeops/loadgenerator:latest'
-                            sh 'docker rmi containerizeops/loadgenerator:latest'
+                            sh 'docker build -t anilagad/loadgenerator:latest .'
+                            sh 'docker push anilagad/loadgenerator:latest'
+                            sh 'docker rmi anilagad/loadgenerator:latest'
                         }
                     }
                 }
@@ -121,9 +121,9 @@ pipeline {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
                         dir('/var/lib/jenkins/workspace/decaFlow-CICD-pipeline/src/paymentservice') {
-                            sh 'docker build -t containerizeops/paymentservice:latest .'
-                            sh 'docker push containerizeops/paymentservice:latest'
-                            sh 'docker rmi containerizeops/paymentservice:latest'
+                            sh 'docker build -t anilagad/paymentservice:latest .'
+                            sh 'docker push anilagad/paymentservice:latest'
+                            sh 'docker rmi anilagad/paymentservice:latest'
                         }
                     }
                 }
@@ -135,9 +135,9 @@ pipeline {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
                         dir('/var/lib/jenkins/workspace/decaFlow-CICD-pipeline/src/productcatalogservice') {
-                            sh 'docker build -t containerizeops/productcatalogservice:latest .'
-                            sh 'docker push containerizeops/productcatalogservice:latest'
-                            sh 'docker rmi containerizeops/productcatalogservice:latest'
+                            sh 'docker build -t anilagad/productcatalogservice:latest .'
+                            sh 'docker push anilagad/productcatalogservice:latest'
+                            sh 'docker rmi anilagad/productcatalogservice:latest'
                         }
                     }
                 }
@@ -149,9 +149,9 @@ pipeline {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
                         dir('/var/lib/jenkins/workspace/decaFlow-CICD-pipeline/src/recommendationservice') {
-                            sh 'docker build -t containerizeops/recommendationservice:latest .'
-                            sh 'docker push containerizeops/recommendationservice:latest'
-                            sh 'docker rmi containerizeops/recommendationservice:latest'
+                            sh 'docker build -t anilagad/recommendationservice:latest .'
+                            sh 'docker push anilagad/recommendationservice:latest'
+                            sh 'docker rmi anilagad/recommendationservice:latest'
                         }
                     }
                 }
@@ -163,9 +163,9 @@ pipeline {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
                         dir('/var/lib/jenkins/workspace/decaFlow-CICD-pipeline/src/shippingservice') {
-                            sh 'docker build -t containerizeops/shippingservice:latest .'
-                            sh 'docker push containerizeops/shippingservice:latest'
-                            sh 'docker rmi containerizeops/shippingservice:latest'
+                            sh 'docker build -t anilagad/shippingservice:latest .'
+                            sh 'docker push anilagad/shippingservice:latest'
+                            sh 'docker rmi anilagad/shippingservice:latest'
                         }
                     }
                 }

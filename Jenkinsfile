@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Git Checkout') {
             steps {
-                git branch: 'latest', url: 'https://github.com/00-ani-00/10-tier-Service-based-project.git'
+                git branch: 'main', url: 'https://github.com/00-ani-00/10-tier-Service-based-project.git'
             }
         }
         stage('Static Code Analysis') {

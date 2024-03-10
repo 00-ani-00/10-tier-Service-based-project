@@ -24,3 +24,5 @@ eksctl create nodegroup --cluster=my-eks22 \
                        --full-ecr-access \
                        --appmesh-access \
                        --alb-ingress-access
+
+ eksctl delete cluster anis-cluster --region eu-west-1                      

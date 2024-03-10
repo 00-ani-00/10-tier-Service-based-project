@@ -180,7 +180,7 @@ pipeline {
         stage('Deploy app to K8s') {
             steps {
                 withKubeConfig(caCertificate: '', clusterName: 'my-eks22', contextName: '', credentialsId: 'k8-token', namespace: 'webapps', restrictKubeConfigAccess: false, serverUrl: 'https://24DD716D951DF2F3919423F98EEDDA7D.gr7.eu-west-1.eks.amazonaws.com') {
-                    dir('/var/lib/jenkins/workspace/my-project/src/shippingservice/')
+                    dir('/var/lib/jenkins/workspace/my-project/k8s-manifests/')
                     sh 'kubectl apply -f deployment-service.yaml'
                     sh 'kubectl get pods'
                     sh 'kubectl get svc'

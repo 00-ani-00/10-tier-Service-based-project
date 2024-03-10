@@ -41,7 +41,7 @@ pipeline {
             steps {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        dir('/var/lib/jenkins/workspace/10-tier-Service-based-project/src/cartservice/') {
+                        dir('/var/lib/jenkins/workspace/10-tier-Service-based-project/src/cartservice/src/') {
                             sh 'docker build -t anilagad/cartservice:latest .'
                             sh 'docker push anilagad/cartservice:latest'
                             sh 'docker rmi anilagad/cartservice:latest'

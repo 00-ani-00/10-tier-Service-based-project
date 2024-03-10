@@ -126,32 +126,32 @@ The EC2 instance was connected to the AWS using AWS CLI and then using the comma
 Create the EKS cluster using the below command:
 
 ```
-eksctl create cluster --name=cluster-name \
-		      --region=ap-south-1 \
-		      --zones=ap-south-1a,ap-south-1b \
-		      --without-nodegroup
+eksctl create cluster --name=my-eks22 \
+                      --region=eu-west-1 \
+                      --zones=eu-west-1a,eu-west-1b \
+                      --without-nodegroup
 
 eksctl utils associate-iam-oidc-provider \
-    --region ap-south-1 \
-    --cluster cluster-name \
+    --region eu-west-1 \
+    --cluster my-eks22 \
     --approve
 
-eksctl create nodegroup --cluster=cluster-name \
-			--region=ap-south-1 \
-			--name=node2 \
-			--node-type=t3.medium \
-			--nodes=2 \
-			--nodes-min=2 \
-			--nodes-max=3 \
-			--node-volume-size=20 \
-			--ssh-access \
-			--ssh-public-key=pem-file-name \
-			--managed \
-			--asg-access \
-			--external-dns-access \
-			--full-ecr-access \
-			--appmesh-access \
-			--alb-ingress-access
+eksctl create nodegroup --cluster=my-eks22 \
+                       --region=eu-west-1 \
+                       --name=node2 \
+                       --node-type=t3.medium \
+                       --nodes=3 \
+                       --nodes-min=2 \
+                       --nodes-max=4 \
+                       --node-volume-size=20 \
+                       --ssh-access \
+                       --ssh-public-key=ireland-key \
+                       --managed \
+                       --asg-access \
+                       --external-dns-access \
+                       --full-ecr-access \
+                       --appmesh-access \
+                       --alb-ingress-access
 ```
 
 It will create the master and the worker nodes seperately with auto scaling and load balancing enabled
